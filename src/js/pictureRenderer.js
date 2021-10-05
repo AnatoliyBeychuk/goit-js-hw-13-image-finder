@@ -1,6 +1,6 @@
 import pictureCardTpl from '../template/picture-card';
 import * as basicLightbox from 'basiclightbox';
-import 'basiclightbox/dist/basiclightbox.min.css';
+import '../../node_modules/basiclightbox/dist/basicLightbox.min.css';
 
 
 class PictureRenderer
