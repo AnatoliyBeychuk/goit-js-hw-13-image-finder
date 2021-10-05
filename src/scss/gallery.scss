@@ -1,0 +1,141 @@
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 30px;
+
+  .load-more {
+    margin-top: 15px;
+  }
+}
+
+.go-up
+{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  border: none;
+
+  .arrow
+  {
+    font-size: 48px !important;
+    color:navy;
+  }
+
+  .go-up__text
+  {
+    position: absolute;
+    top: -30%;
+    left: 15%;
+    color: navy;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 18px;
+  }
+
+  &.go-up:hover,
+  &.go-up:focus
+  {
+    .go-up__text
+    {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: cursor;
+    }
+  }
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .search-container {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    padding: 10px;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #000;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: -10px;
+  margin-bottom: -10px;
+
+  .gallery__item {
+    flex-basis: calc(100% / 1 - 10px);
+    margin-left: 10px;
+    margin-bottom: 10px;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    @media screen and (min-width: 768px) and (max-width: 1200px - 1px) {
+      flex-basis: calc(100% / 3 - 10px);
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc(100% / 4 - 10px);
+    }
+
+    .thumb {
+      height: 236px;
+      // width: 320px;
+
+      img {
+        display: block;
+        height: 100%;
+        width: 100%;
+
+        object-fit: cover;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+      cursor: pointer;
+      transform: scale(1.03);
+    }
+  }
+}
+
+.photo-card {
+  .stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px 0 15px;
+
+    .stats-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+
+      .material-icons {
+        margin-right: 5px;
+      }
+    }
+  }
+}
